@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  root to: "/"
-
+  root to: "pages#home"
+  #splash page
   get '/', to: 'pages#home'
+
+  #sessions
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
 
   # users
   get '/signup', to: 'users#new'
