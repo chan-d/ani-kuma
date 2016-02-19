@@ -4,13 +4,23 @@
 	<div class='container'> 
 		<div class='col-md-10 col-md-offset-1 b_center'>
 			<div class="col-md-3 avatar_pic">
-				<p>avatar will go here</p>
+				<br>
+				<p><img src="http://placehold.it/200x200"></p>
 			</div>
 
-			<div class='col-md-6 col-md-offset-1 center'> 
-				<p> signed in as <%= @user.user_name %> </p>
-				<p> welcome : <%= @user.full_name %> </p>
+			<div class='col-md-5 col-md-offset-1 center'> 
+				<br>
+				<p> <strong> User Name: </strong><%= @user.user_name %> </p>
+				<p> <strong> welcome: </strong><%= @user.full_name %> </p>
+				<p> <strong> created on: </strong><%= @user.created_at.strftime("%b. %d %Y") %> </p>
+				<button>edit</button>
 			</div>
+
+			<div class='col-md-5 col-md-offset-1 center'>
+				<p> <strong> About me: </strong><%= @user.user_name %> </p>
+
+			</div>
+
 		</div>
 	</div>
 </div>

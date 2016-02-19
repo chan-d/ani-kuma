@@ -15,11 +15,10 @@
  */
 .webplayer{
 	position: relative;
-	top: 25px;
+	top: 30px;
 	left: -125px;
 	opacity: 0.1;
 	
-
 }
 .webplayer:hover {
 	opacity: 0.7;
@@ -28,6 +27,7 @@
 iframe{
 	height: 300px;
 }
+
 .navIcon {
 	position: relative;
 	top: -15px;
@@ -41,7 +41,8 @@ iframe{
 }
 
 .navbar .navbar-text {
-	color: white
+	color: white;
+	font-size: 20px;
 }
 
 .navbar-default .navbar-nav li a{
