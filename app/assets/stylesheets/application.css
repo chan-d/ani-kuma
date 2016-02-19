@@ -22,7 +22,8 @@
 }
 
 .navbar {
-	background-color: rgb(246,142,39);
+	background-color: rgba(246,142,39, 0.5);
+	border-bottom-color: rgba(0,0,0,0.1);
 	margin: 0;
 }
 
@@ -36,12 +37,24 @@
 
 .jumbotron  {
 	min-height: 500px;
-	background: url(http://afrsh.com/wp-content/uploads/2015/07/studio_ghibli.jpg);
+	background: url('studio_ghibli.jpg');
 	background-size: cover;
 	margin-top: -20px;
-
-
 }
 
+.center {
+	border: 1px solid black;
+	min-height: 300px;
+}
 
+.left {
+	border: 1px solid green;
+	min-height: 350px;
+}
+
+.right {
+	border: 1px solid red;
+	min-height: 350px;
+
+}
 
