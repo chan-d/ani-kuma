@@ -9,11 +9,6 @@
 </head>
 <body>
 
-
-
-
-
-
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,8 +25,8 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
 			<li ><%= link_to "Users", '/users' %></li>
-		  <% if current_user %>
 		    <li ><%= link_to "Profile", user_path(current_user) %></li>
 		    <li><%= link_to "Log Out", logout_path %></li>
 		  <% else %>   
@@ -44,19 +39,11 @@
     </div><!-- /.container-fluid -->
   </nav>
 
+  <div class="jumbotron">
+  <div class="container">
 
-
-
-
-
-
-
-
-
-
-
-
-
+  </div>
+</div>	
 
 
 <%= yield %>

@@ -23,6 +23,7 @@
 
 .navbar {
 	background-color: rgb(246,142,39);
+	margin: 0;
 }
 
 .navbar .navbar-text {
@@ -32,3 +33,15 @@
 .navbar-default .navbar-nav li a{
 	color: white;
 }
+
+.jumbotron  {
+	min-height: 500px;
+	background: url(http://afrsh.com/wp-content/uploads/2015/07/studio_ghibli.jpg);
+	background-size: cover;
+	margin-top: -20px;
+
+
+}
+
+
+
