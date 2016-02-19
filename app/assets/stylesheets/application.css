@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+
+.navIcon {
+	position: relative;
+	top: -15px;
+	left:  -5px;
+}
+
+.navbar {
+	background-color: rgb(246,142,39);
+}
+
+.navbar .navbar-text {
+	color: white
+}
+
+.navbar-default .navbar-nav li a{
+	color: white;
+}
