@@ -1,19 +1,29 @@
 <h1> Profile </h1>
 
+<div class="row"> 
+	<div class='container'> 
+		<div class='col-md-10 col-md-offset-1 b_center'>
+			<div class="col-md-3 avatar_pic">
+				<p>avatar will go here</p>
+			</div>
 
-	<div>
-		<p> signed in as <%= @user.user_name %> </p>
-		<p> welcome : <%= @user.full_name %> </p>
+			<div class='col-md-6 col-md-offset-1 center'> 
+				<p> signed in as <%= @user.user_name %> </p>
+				<p> welcome : <%= @user.full_name %> </p>
+			</div>
+		</div>
 	</div>
+</div>
 
 <div class="row"> 
-	<div class= "col-md-5 left"> 
-		<p> recent comments go here</p>
-	</div>
+	<div class='container'> 
+		<div class= "col-md-5 b_left"> 
+			<p> recent comments go here</p>
+		</div>
 
-	<div class="col-md-5 col-md-offset-1 right "> 
-		<p> watch list here </p>
+		<div class="col-md-5 col-md-offset-1 b_right "> 
+			<p> watch list here </p>
+		</div>
 	</div>
-
 
 </div>

@@ -13,8 +13,21 @@
  *= require_tree .
  *= require_self
  */
+.webplayer{
+	position: relative;
+	top: 25px;
+	left: -125px;
+	opacity: 0.1;
+	
 
+}
+.webplayer:hover {
+	opacity: 0.7;
+}
 
+iframe{
+	height: 300px;
+}
 .navIcon {
 	position: relative;
 	top: -15px;
@@ -42,19 +55,30 @@
 	margin-top: -20px;
 }
 
-.center {
+.b_center {
 	border: 1px solid black;
 	min-height: 300px;
 }
 
-.left {
+.b_left {
 	border: 1px solid green;
 	min-height: 350px;
 }
 
-.right {
+.b_right {
 	border: 1px solid red;
 	min-height: 350px;
-
 }
-
+.avatar_pic {
+	border: 1px solid orange;
+	min-height: 200px; 
+}
+.left {
+	border: 1px solid limegreen;
+}
+.center {
+	border: 1px solid brown;
+}
+.right {
+	border: 1px solid pink;
+}
