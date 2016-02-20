@@ -1,6 +1,15 @@
 
 <h1>Signup!</h1>
-
+<!-- flash messages -->
+  <% flash.each do |name, msg| %>
+    <% if name == "error" %>
+      <p class="alert-danger">
+    <% else %>
+      <p class="alert-success">
+    <% end %>
+      <small> <%= name.capitalize %>: <%= msg %> </small>
+    </p>
+  <% end %>
 <%= form_for :user, url: '/users' do |f| %>
 
   Full Name: <%= f.text_field :full_name %>

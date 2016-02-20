@@ -1,3 +1,13 @@
+<!-- flash messages -->
+  <% flash.each do |name, msg| %>
+    <% if name == "error" %>
+      <p class="alert-danger">
+    <% else %>
+      <p class="alert-success">
+    <% end %>
+      <small> <%= name.capitalize %>: <%= msg %> </small>
+    </p>
+  <% end %>
 <h1> Profile </h1>
 
 <div class="row"> 

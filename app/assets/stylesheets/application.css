@@ -83,3 +83,8 @@ iframe{
 .right {
 	border: 1px solid pink;
 }
+
+.movie_poster {
+	max-height: 300px;
+	border: 1px solid blue;
+}
