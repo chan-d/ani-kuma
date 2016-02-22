@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 	has_many :reviews
 
 	def index
-		
+		@users = User.all
 	end
 
 	def new
