@@ -6,10 +6,13 @@
 		 <div class='col-md-3'> <img class="movie_poster" src="<%= movie.img_url %>" size="300px">
 		 </div>
 			<div class='col-md-6 col-md-offset-1 b_center'>
-			<p>English Title: <%= movie.e_title %></p>
+
+			<p>English Title:<%= movie.e_title %> </p>
 			<p>Japanese Title: <%= movie.j_title %></p>
 			</div>
-		<button>add to watchlist</button>	
+		<button>add to watchlist</button>
+		<%= button_to "add new movie", '/movies/new', method: :get %>
+		<%= button_to "New Review", '/reviews/new' %>	
 		</div>
 		
 	</div>
@@ -19,6 +22,7 @@
 
 <div class='b_center'>
 	<%= link_to "New Review", '/reviews/new' %>
+	
 	
 </div>	
 

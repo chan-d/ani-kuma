@@ -1,0 +1,10 @@
+<h1>new movie!</h1>
+
+<%= form_for :movie, url: '/movies' do |f| %>
+ 
+  <p>English Title: <%= f.text_field :e_title %></p>
+  <p>Japanese Title: <%= f.text_field :j_title %></p>
+  <p>Movie poster Url: <%= f.text_field :img_url %></p>
+  <p><%= f.submit "Submit" %></p>
+
+<% end %>
