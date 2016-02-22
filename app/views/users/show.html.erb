@@ -1,13 +1,4 @@
-<!-- flash messages -->
-  <% flash.each do |name, msg| %>
-    <% if name == "error" %>
-      <p class="alert-danger">
-    <% else %>
-      <p class="alert-success">
-    <% end %>
-      <small> <%= name.capitalize %>: <%= msg %> </small>
-    </p>
-  <% end %>
+
 <h1> Profile </h1>
 
 <div class="row"> 
@@ -15,7 +6,7 @@
 		<div class='col-md-10 col-md-offset-1 b_center'>
 			<div class="col-md-3 avatar_pic">
 				<br>
-				<p><img src="http://placehold.it/200x200"></p>
+				<p><img src="http://placehold.it/175x200"></p>
 			</div>
 
 			<div class='col-md-5 col-md-offset-1 center'> 
@@ -39,6 +30,15 @@
 	<div class='container'> 
 		<div class= "col-md-5 b_left"> 
 			<p> recent comments go here</p>
+			<div class='left'> 
+				<% @reviews.each do |review| %>
+					<p><strong>Title: </strong> <%= review.title %></p>
+					<p><strong>Review: </strong> <%= review.review %></p>
+					<br>
+					<%= button_to 'Edit Review', edit_review_path(review.id), method: :get %>
+					<%= button_to 'Delete Review', delete_review_path(review.id), method: :delete %>  
+				<% end %>
+			</div>
 		</div>
 
 		<div class="col-md-5 col-md-offset-1 b_right "> 

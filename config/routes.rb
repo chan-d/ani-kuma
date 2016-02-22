@@ -22,7 +22,8 @@ Rails.application.routes.draw do
 
   #reviews
   get '/reviews', to: 'reviews#index', as: 'reviews'
-  post '/reviews', to: 'reviews#create'
+  get '/reviews/new', to: 'reviews#new'  
+  post '/reviews', to: 'reviews#create', as: 'new_review'
   get '/reviews/:id', to: 'reviews#show', as: 'review'
   get '/reviews/:id/edit', to: 'reviews#edit', as: 'edit_review'
   patch '/reviews/:id', to: 'reviews#update'
