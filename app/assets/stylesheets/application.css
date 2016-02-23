@@ -16,7 +16,7 @@
 .webplayer{
 	position: relative;
 	top: 30px;
-	left: -125px;
+	left: -50px;
 	opacity: 0.1;
 	
 }
@@ -85,7 +85,7 @@ iframe{
 }
 
 .movie_poster {
-	max-height: 300px;
+	max-height: 150px;
 	border: 1px solid blue;
 }
 
