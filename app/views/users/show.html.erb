@@ -10,7 +10,7 @@
 					<div class="col-md-3">
 						<div class='panel panel-danger'>
 						  <div class='panel-body'>
-							<p><img src="http://placehold.it/175x200"></p>
+							<p><img src="http://placehold.it/125x175"></p>
 						  </div>
 						</div>
 					</div>
@@ -54,8 +54,7 @@
 								
 
 								<div class='panel-footer'> 
-								<p><%= button_to 'Edit Review', edit_review_path(review.id), method: :get %>
-								<%= button_to 'Delete Review', delete_review_path(review.id), method: :delete %></p>
+								<p><%= button_to 'Edit Review', edit_review_path(review.id), method: :get, class: "btn btn-warning" %><%= button_to 'Delete Review', delete_review_path(review.id), method: :delete, class: "btn btn-danger" %></p>
 								</div>
 						</div>
 					<% end %>

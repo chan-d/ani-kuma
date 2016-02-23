@@ -13,7 +13,7 @@
 									<img class="movie_poster" src="<%= movie.img_url %>">
 										<div class='panel-footer'> 
 											<button>add to watchlist</button>
-												<%= button_to "New Review", "/movies/#{movie.id}/reviews/new", method: :get %>
+												<%= button_to "New Review", "/movies/#{movie.id}/reviews/new", method: :get,class: "btn btn-primary" %>
 										</div>
 								</div>
 							</div>

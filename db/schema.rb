@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160222234028) do
     t.string   "title"
     t.text     "review"
     t.string   "movie_name"
+    t.string   "user_name"
     t.integer  "user_id"
     t.integer  "movie_id"
     t.datetime "created_at", null: false

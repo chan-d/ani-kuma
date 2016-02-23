@@ -3,22 +3,21 @@ $(document).ready(function(){
 	console.log("javascript loaded");
 
 	$('#search_button').on('click', function(e){
-		
+		$('#420').empty();
 		e.preventDefault();
 		var searched= $('.search_bar').val().toLowerCase().replace(/ /g, '-');		
 		
 		$.ajax({
 			method: "GET",
 			url: 'http://hummingbird.me/api/v1/anime/' + searched,
-			success: function(data) {
-				//empty div
-				$('#420').empty();
+			success: function(data) {		
 				$('#420').append(
 					//display search results
-					'<p> English Title: ' + data.title + '</p>' +
-					'<p> Japanese Title: ' + data.alternate_title + '</p>' +
-					'<p> movie poster: <img class="movie_poster" src='+ data.cover_image + '</p>' +
-					'<p> Synopsis: ' + data.synopsis + '</p>' +
+					'<p> <strong>Searched Movie:</strong></p>' +
+					'<p> <strong>English Title:</strong> ' + data.title + '</p>' +
+					'<p> <strong>Japanese Title:</strong> ' + data.alternate_title + '</p>' +
+					'<p> <strong>movie poster:</strong> <img class="movie_poster" src='+ data.cover_image + '</p>' +
+					'<p> <strong>Synopsis:</strong> ' + data.synopsis + '</p>' +
 
 					//hidden form
 					'<form action="/movies" accept-charset="UTF-8" method="post">' +
@@ -31,6 +30,7 @@ $(document).ready(function(){
 					'<input type="submit" name="commit" value="Add Movie">' +
 					'</form>'
 					);
+				
 			}
 		});
 	});

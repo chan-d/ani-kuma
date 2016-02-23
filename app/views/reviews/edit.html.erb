@@ -7,7 +7,7 @@
 	   <strong>Content:</strong>
 	    <p><%= f.text_area :review, placeholder: "Review" %></p>
 	  <%= f.submit "Save Review" %>
-	  <%= button_to "Back", review_path, method: :get %>
+	  <%= button_to "Back", review_path, method: :get, class: "btn btn-primary" %>
 	<% end %>
 	</div>
 <div>

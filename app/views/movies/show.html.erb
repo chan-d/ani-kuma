@@ -1,6 +1,9 @@
 <div class='row'>
 	<div class='container'>
-		<div class='col-md-6 col-md-offset-3 b_center'>
+		<div class='col-md-8 col-md-offset-2'>
+			<div class="panel panel-default">
+			<div class='panel-heading'>Movie info</div>
+			<div class="panel-body">
 			<div class='col-md-3'> <img class="movie_poster" src="<%= @movie.img_url %>" size="300px">
 			 </div>
 			<div class='col-md-8 col-md-offset-1'>
@@ -11,7 +14,12 @@
 					<p><strong>Synopsis: </strong><%= @movie.synopsis %></p>
 				  </div>
 				</div>
-		  <%= button_to "New Review", "/movies/#{@movie.id}/reviews/new", method: :get %>
+		  
+			</div>
+			</div>
+			<div class='panel-footer'> 
+			<%= button_to "New Review", "/movies/#{@movie.id}/reviews/new", method: :get,class: "btn btn-warning" %>
+			</div>
 			</div>
 
 		</div>	
@@ -20,14 +28,20 @@
 
 <div class='row'> 
 	<div class='container'>
-		<div class='col-md-8 col-md-offset-2 b_center'>
+		<div class='col-md-8 col-md-offset-2'>
 			<div class="panel panel-default">
+			<div class='panel-heading'>User Reviews</div>
 			  <div class="panel-body">
-
-
+				<% @movie.reviews.each do |review| %>
+				<p> <strong> User Name: </strong><%= review.user_name %></p>
+				<p> <strong> Review title: </strong><%= review.title %></p>
+				<p> <strong> Review: </strong><%= review.review %></p>
+				<hr>
+				<% end %>
 
 			  </div>
 			</div>
 		</div>
 	</div>
 </div>
+

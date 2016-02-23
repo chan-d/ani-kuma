@@ -4,6 +4,7 @@ class CreateReviews < ActiveRecord::Migration
       t.string :title
       t.text :review
       t.string :movie_name
+      t.string :user_name
       t.references :user
       t.references :movie
 

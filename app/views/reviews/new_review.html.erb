@@ -8,6 +8,7 @@
 		    <p><%= f.text_field :title, placeholder: "Title" %></p>
 		    <p><%= f.text_area :review, placeholder: "Review" %></p>
 		  <%= f.hidden_field :user_id, value: current_user.id%>
+		  <%= f.hidden_field :user_name, value: current_user.user_name%>
 		  <%= f.hidden_field :movie_id, value: params[:id]%>
 		  <p><%= f.submit "Create Review" %></p>
 		<% end %>
