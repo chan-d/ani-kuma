@@ -88,3 +88,11 @@ iframe{
 	max-height: 300px;
 	border: 1px solid blue;
 }
+
+.panel-heading{
+	text-align: right;
+}
+.block{
+	position: relative;
+	display: inline-block;
+}

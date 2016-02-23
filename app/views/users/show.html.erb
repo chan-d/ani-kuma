@@ -1,59 +1,77 @@
 
-<h1> Profile </h1>
 
-<div class="row"> 
-	<div class='container'> 
-		<div class='col-md-10 col-md-offset-1 b_center'>
-			<div class="col-md-3 avatar_pic">
-				<br>
-				<p><img src="http://placehold.it/175x200"></p>
+<div class='container'> 
+	<div class="row">
+		<div class='col-md-10 col-md-offset-1'>
+			
+			<div class='panel panel-primary'>
+					<div class="panel-heading"><%= @user.user_name %></div>
+				<div class='panel-body'> 
+					<div class="col-md-3">
+						<div class='panel panel-danger'>
+						  <div class='panel-body'>
+							<p><img src="http://placehold.it/175x200"></p>
+						  </div>
+						</div>
+					</div>
+
+					<div class='col-md-3'>
+						<div class="panel panel-warning">
+							
+						  <div class="panel-body"> 
+							<p> <strong> welcome: </strong><%= @user.full_name %> </p>
+							<p> <strong> created on: </strong><%= @user.created_at.strftime("%b. %d %Y") %> </p>
+							<button>edit</button>
+							</div>
+						</div>
+					</div>
+
+					<div class='col-md-5 col-md-offset-1 center'>
+						<p> <strong> About me: </strong><%= @user.about_me %> </p>
+						<button>edit</button>
+					</div>
+				</div> 
 			</div>
-
-			<div class='col-md-5 col-md-offset-1 center'> 
-				<br>
-				<p> <strong> User Name: </strong><%= @user.user_name %> </p>
-				<p> <strong> welcome: </strong><%= @user.full_name %> </p>
-				<p> <strong> created on: </strong><%= @user.created_at.strftime("%b. %d %Y") %> </p>
-				<button>edit</button>
-			</div>
-
-			<div class='col-md-5 col-md-offset-1 center'>
-				<p> <strong> About me: </strong><%= @user.about_me %> </p>
-				<button>edit</button>
-			</div>
-
-		</div>
+		</div>	
 	</div>
 </div>
 
+<div class="container"> 
 	<div class="row"> 
-		<div class='col-md-5 col-md-offset-1 b_left'> 
-			<p> recent comments go here</p>
-				<% @reviews.each do |review| %>
-					<div class='container'>
-					<div class='col-md-3 left'>
+		<div class='col-md-6 col-md-offset-1'> 
+			<div class="panel panel-info">			
+			  <div class="panel-heading"> Recent Comments</div>
+				<div class="panel-body">  
+					<% @reviews.each do |review| %>
+						<div class='panel panel-info'>
+							<div class='panel-body'> 
+								<div class='col-md-6'>
+								<p><strong>Movie: </strong> <%= link_to "#{review.movie_name}", "/movies/#{review.movie_id}" %></p> 
+								<p><strong>Title: </strong> <%= review.title %></p>
+								<p><strong>Review: </strong> <%= review.review %></p>
+								</div>
+							</div>
+								
 
-					<p><strong>Movie: </strong> <%= link_to "#{review.movie_name}", '/movies/#{movie.id}' %></p> 
-					<p><strong>Title: </strong> <%= review.title %></p>
-					<p><strong>Review: </strong> <%= review.review %></p>
-					</div>
-
-					<div class='col-md-1 right'> 
-					<%= button_to 'Edit Review', edit_review_path(review.id), method: :get %>
-					<%= button_to 'Delete Review', delete_review_path(review.id), method: :delete %>
-					</div>
+								<div class='panel-footer'> 
+								<p><%= button_to 'Edit Review', edit_review_path(review.id), method: :get %>
+								<%= button_to 'Delete Review', delete_review_path(review.id), method: :delete %></p>
+								</div>
+						</div>
+					<% end %>
+				</div>
 					
-					</div>
-					<hr>
-				<% end %>
+			</div>
 		</div>
+	
 		
-
- 
-		<div class="col-md-4 col-md-offset-1 b_right"> 
-			<p> watch list here </p>
+		<div class="col-md-3 col-md-offset-1 b_right">	
+	 		<div class="panel panel-info">
+				<div class="panel-body">				 
+					<p> watch list here </p>
+				</div>
+			</div>
 		</div>
-
 	</div>
- 
 </div>
+ 

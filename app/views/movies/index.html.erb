@@ -1,7 +1,8 @@
 <%= button_to "Add New Movie", '/movies/new', method: :get %>
+<% @movies.each do |movie| %> 
 <div class="row"> 
 	<div class='container'>
-	<% @movies.each do |movie| %> 
+	
 		<div class="col-md-10 col-md-offset-1 b_right ">
 		 <div class='col-md-3'> <img class="movie_poster" src="<%= movie.img_url %>" size="300px">
 		 </div>

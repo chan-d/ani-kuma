@@ -1,12 +1,32 @@
-<div class='container'>
-	<div class='col-md-6 col-md-offset-3 b_center'>
-		<div class='col-md-3'> <img class="movie_poster" src="<%= @movie.img_url %>" size="300px">
-		 </div>
-		<div class='col-md-6 col-md-offset-3'>
-			<p><strong>English Title:</strong> <%= @movie.e_title %></p>
-			<p><strong>Japanese Title: </strong><%= @movie.e_title %></p>
-		</div>
+<div class='row'>
+	<div class='container'>
+		<div class='col-md-6 col-md-offset-3 b_center'>
+			<div class='col-md-3'> <img class="movie_poster" src="<%= @movie.img_url %>" size="300px">
+			 </div>
+			<div class='col-md-6 col-md-offset-3'>
+				<div class="panel panel-default">
+				  <div class="panel-body">
+				  	<p><strong>English Title:</strong> <%= @movie.e_title %></p>
+					<p><strong>Japanese Title: </strong><%= @movie.e_title %></p>
+				  </div>
+				</div>
+		  <%= button_to "New Review", "/movies/#{@movie.id}/reviews/new", method: :get %>
+			</div>
 
+		</div>	
 	</div>
-	
+</div>
+
+<div class='row'> 
+	<div class='container'>
+		<div class='col-md-8 col-md-offset-2 b_center'>
+			<div class="panel panel-default">
+			  <div class="panel-body">
+
+
+
+			  </div>
+			</div>
+		</div>
+	</div>
 </div>
