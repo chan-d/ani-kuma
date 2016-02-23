@@ -1,4 +1,4 @@
-<%= button_to "Add New Movie", '/movies/new', method: :get %>
+
 <% @movies.each do |movie| %>
 <div class='container'> 
 	<div class="row"> 		
@@ -21,8 +21,9 @@
 							<div class='col-md-5'>
 								<div class='panel panel-info'>
 									<div class='panel-body'>
-										<p>English Title: <%= link_to "#{movie.e_title}", movie_path(movie.id) %> </p>
-										<p>Japanese Title: <%= movie.j_title %></p>
+										<p><strong>English Title: </strong><%= link_to "#{movie.e_title}", movie_path(movie.id) %> </p>
+										<p><strong>Japanese Title: </strong><%= movie.j_title %></p>
+										<p><strong>Synopsis: </strong><%= movie.synopsis %></p>
 									</div>
 								</div>
 							</div>

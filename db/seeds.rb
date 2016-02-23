@@ -15,10 +15,3 @@ user1_data = {
 	about_me: "i like turtles"
 }
 user1 = User.create(user1_data)
-
-movie_data = {
-	e_title: "Spirited Away",
-	j_title: "Sen to Chihiro no Kamikakushi",
-	img_url: "https://static.hummingbird.me/anime/poster_images/000/000/176/large/rI6EJ2r.jpg?1440954517"
-}
-movie1 = Movie.create(movie_data)
