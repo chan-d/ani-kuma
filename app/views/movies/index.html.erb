@@ -1,4 +1,4 @@
-
+<%= button_to "Add New Movie", '/movies/new', method: :get %>
 <div class="row"> 
 	<div class='container'>
 	<% @movies.each do |movie| %> 
@@ -7,12 +7,13 @@
 		 </div>
 			<div class='col-md-6 col-md-offset-1 b_center'>
 
-			<p>English Title:<%= movie.e_title %> </p>
+			<p>English Title:<%= link_to "#{movie.e_title}", movie_path(movie.id) %> </p>
 			<p>Japanese Title: <%= movie.j_title %></p>
+
 			</div>
 		<button>add to watchlist</button>
-		<%= button_to "add new movie", '/movies/new', method: :get %>
-		<%= button_to "New Review", '/reviews/new' %>	
+		
+		<%= button_to "New Review", "/movies/#{movie.id}/reviews/new", method: :get %>	
 		</div>
 		
 	</div>

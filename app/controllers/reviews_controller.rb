@@ -13,7 +13,6 @@ class ReviewsController < ApplicationController
 	def create
 		@review = Review.new(review_params)
 		if @review.save
-			@review.user_id= params[:user_id]
 			flash[:notice] = 'review posted'
 			redirect_to '/movies'
 		else
@@ -45,6 +44,6 @@ class ReviewsController < ApplicationController
 	private
 	
 	def review_params
-		params.require(:review).permit(:title, :review, :user_id)
+		params.require(:review).permit(:title, :review, :user_id, :movie_id, :movie_name)
 	end
 end

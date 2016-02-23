@@ -4,10 +4,11 @@
 		Create a New Review:
 
 		<%= form_for @review, url: new_review_path do |f| %>
-
+			<p><%= f.text_field :movie_name, value: current_movie.e_title %></p>	
 		    <p><%= f.text_field :title, placeholder: "Title" %></p>
 		    <p><%= f.text_area :review, placeholder: "Review" %></p>
 		  <%= f.hidden_field :user_id, value: current_user.id%>
+		  <%= f.hidden_field :movie_id, value: params[:id]%>
 		  <p><%= f.submit "Create Review" %></p>
 		<% end %>
 		</div>	

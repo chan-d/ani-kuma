@@ -31,7 +31,9 @@
 			<p> recent comments go here</p>
 				<% @reviews.each do |review| %>
 					<div class='container'>
-					<div class='col-md-3 left'> 
+					<div class='col-md-3 left'>
+
+					<p><strong>Movie: </strong> <%= link_to "#{review.movie_name}", '/movies/#{movie.id}' %></p> 
 					<p><strong>Title: </strong> <%= review.title %></p>
 					<p><strong>Review: </strong> <%= review.review %></p>
 					</div>
