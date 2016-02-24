@@ -22,6 +22,7 @@
 			<button class='video_button'> Watch now</button>
 			</div>
 			</div>
+			<div class='col-md-6'> 
 				<div class='video_player'> 
 					<% if @movie.id == 10 %>
 						<% video_id = '0B82YkbmbDGjzWC16RTBhUExCdjA' %>
@@ -31,8 +32,9 @@
 						<% video_id = '0B82YkbmbDGjzS2ozOHJOdGJXYUU' %>
 					<% end %>
 
-					<iframe src="https://drive.google.com/file/d/<%= video_id %>/preview" width="600" height="480"></iframe>
+					<iframe src="https://drive.google.com/file/d/<%= video_id %>/preview" width="640" height="344"></iframe>
 				</div>	
+			</div>	
 		</div>	
 	</div>
 </div>

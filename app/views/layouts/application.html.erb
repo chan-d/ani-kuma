@@ -49,6 +49,7 @@
   </div>
 </div>	
 <!-- flash messages -->
+<div class='container'> 
   <% flash.each do |name, msg| %>
     <% if name == "error" %>
       <p class="alert-danger">
@@ -58,8 +59,9 @@
       <small> <%= name.capitalize %>: <%= msg %> </small>
     </p>
   <% end %>
-
+</div>
+<div class='container'>
 <%= yield %>
-
+</div>
 </body>
 </html>

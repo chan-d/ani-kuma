@@ -113,5 +113,7 @@ iframe{
 }
 
 .video_player{
+	position: relative;
+	vertical-align: center;
 	display: none;
 }
