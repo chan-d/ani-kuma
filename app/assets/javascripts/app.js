@@ -2,11 +2,11 @@ $(document).ready(function(){
 
 	console.log("javascript loaded");
 
-	$('#search_button').on('click', function(e){
-		$('#420').empty();
+	$(document).on('click', '#search_button', function(e){
+		
 		e.preventDefault();
 		var searched= $('.search_bar').val().toLowerCase().replace(/ /g, '-');		
-		
+		$('#420').empty();
 		$.ajax({
 			method: "GET",
 			url: 'http://hummingbird.me/api/v1/anime/' + searched,
