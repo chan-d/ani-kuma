@@ -28,7 +28,14 @@
 
 					<div class='col-md-5 col-md-offset-1 center'>
 						<p> <strong> About me: </strong><%= @user.about_me %> </p>
-						<button>edit</button>
+						<div id="about_me_box">							
+								<%= form_for @user, url: {action: 'update'} do |f| %>
+								<%= f.text_area :about_me, class: "about_me_form" %>
+								<%= f.submit "Save", class: "btn btn-success" %>
+								<% end %>
+						</div>
+						
+						<button id="about_me">edit</button>
 					</div>
 				</div> 
 			</div>

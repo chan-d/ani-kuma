@@ -2,6 +2,15 @@ $(document).ready(function(){
 
 	console.log("javascript loaded");
 
+	$("#about_me").on('click', function (){
+	$("#about_me_box").css("display","block");
+	$("#about_me").css("display", "none");
+
+	});
+
+
+
+
 	$(document).on('click', '#search_button', function(e){
 		
 		e.preventDefault();
@@ -10,7 +19,8 @@ $(document).ready(function(){
 		$.ajax({
 			method: "GET",
 			url: 'http://hummingbird.me/api/v1/anime/' + searched,
-			success: function(data) {		
+			success: function(data) {	
+
 				$('#rendered_search').append(
 					//display search results
 					

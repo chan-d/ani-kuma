@@ -1,13 +1,19 @@
-<div class='b_center'>
-	<div class='container'>
-	<strong >Edit Your review:</strong></p>
-	<%= form_for @review do |f| %>
-	  <strong>Title: </strong>
-	    <p><%= f.text_field :title, placeholder: "Title" %></p>
-	   <strong>Content:</strong>
-	    <p><%= f.text_area :review, placeholder: "Review" %></p>
-	  <%= f.submit "Save Review" %>
-	  <%= button_to "Back", review_path, method: :get, class: "btn btn-primary" %>
-	<% end %>
+<div class='container'>
+	<div class='col-md-8 col-md-offset-2'>
+	<div class ='panel panel-warning'>
+		<div class='panel-heading'>
+			<strong >Edit Your review:</strong>
+		</div>
+		<div class='panel-body centered_block'>
+			<%= form_for @review do |f| %>
+		  <strong>Title: </strong>
+		    <p><%= f.text_field :title, placeholder: "Title" %></p>
+		   <strong>Content:</strong>
+		    <p><%= f.text_area :review, placeholder: "Review" %></p>
+		  <%= f.submit "Save Review", class: "btn btn-default" %>
+		  <%= button_to "Back", review_path, method: :get, class: "btn btn-default" %>
+		<% end %>
+		</div>
 	</div>
-<div>
+	</div>
+</div>
