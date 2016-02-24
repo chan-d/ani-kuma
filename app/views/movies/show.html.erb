@@ -23,7 +23,15 @@
 			</div>
 			</div>
 				<div class='video_player'> 
-					<iframe   src="https://drive.google.com/file/d/0B82YkbmbDGjzWC16RTBhUExCdjA/preview" width="600" height="480"></iframe>
+					<% if @movie.id == 10 %>
+						<% video_id = '0B82YkbmbDGjzWC16RTBhUExCdjA' %>
+					<% elsif @movie.id == 7 %>
+						<% video_id = '0B82YkbmbDGjzNDJfRU9lSnVlT1U' %>
+					<% elsif @movie.id == 3 %>	
+						<% video_id = '0B82YkbmbDGjzS2ozOHJOdGJXYUU' %>
+					<% end %>
+
+					<iframe src="https://drive.google.com/file/d/<%= video_id %>/preview" width="600" height="480"></iframe>
 				</div>	
 		</div>	
 	</div>

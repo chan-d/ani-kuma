@@ -21,10 +21,6 @@ class MoviesController < ApplicationController
 		@movie = Movie.find_by_id(params[:id])
 	end
 
-	def watch
-		render 'watch/video_player'
-		
-	end
 
 	private
 

@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get '/movies/new', to: 'movies#new'
   post '/movies', to: 'movies#create', as: 'new_movie'
   get '/movies/:id', to: 'movies#show', as: 'movie'
-  get '/movies/:id/watch', to: 'movies#watch', as: 'watch_movie'
+
 
 
   #reviews

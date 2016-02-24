@@ -1,14 +1,16 @@
 $(document).ready(function(){
 
 	console.log("javascript loaded");
-
-	$("#about_me").on('click', function (){
+		//edit about me box in user profile
+	$(document).on('click', "#about_me", function (e){
+		e.preventDefault();
 	$("#about_me_box").css("display","block");
 	$("#about_me").css("display", "none");
 
 	});
-
-	$(".video_button").on('click', function (){
+		//show video player in movie#show
+	$(document).on('click', ".video_button", function (e){
+		e.preventDefault();
 	$(".video_player").css("display","block");
 	$(".video_button").css("display", "none");
 
