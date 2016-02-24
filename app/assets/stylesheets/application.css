@@ -96,3 +96,6 @@ iframe{
 	position: relative;
 	display: inline-block;
 }
+.centered_block{
+	text-align: center;
+}

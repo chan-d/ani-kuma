@@ -1,9 +1,14 @@
 <div class='container'>
-	<div class='b_center'> 
-		<div class="center" >
-		Create a New Review:
+	<div class='col-md-8 col-md-offset-2'> 
+		<div class="panel panel-warning" >
+		<div class="panel-heading">
+			Create a New Review:
+		</div>
+		<div class="centered_block">
+		
 
 		<%= form_for @review, url: new_review_path do |f| %>
+		<br>
 			<p><%= f.text_field :movie_name, value: current_movie.e_title %></p>	
 		    <p><%= f.text_field :title, placeholder: "Title" %></p>
 		    <p><%= f.text_area :review, placeholder: "Review" %></p>
@@ -12,6 +17,8 @@
 		  <%= f.hidden_field :movie_id, value: params[:id]%>
 		  <p><%= f.submit "Create Review" %></p>
 		<% end %>
+		
+		</div>
 		</div>	
 	</div>
 </div>		

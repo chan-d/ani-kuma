@@ -6,14 +6,14 @@ $(document).ready(function(){
 		
 		e.preventDefault();
 		var searched= $('.search_bar').val().toLowerCase().replace(/ /g, '-');		
-		$('#420').empty();
+		$('#rendered_search').empty();
 		$.ajax({
 			method: "GET",
 			url: 'http://hummingbird.me/api/v1/anime/' + searched,
 			success: function(data) {		
-				$('#420').append(
+				$('#rendered_search').append(
 					//display search results
-					'<p> <strong>Searched Movie:</strong></p>' +
+					
 					'<p> <strong>English Title:</strong> ' + data.title + '</p>' +
 					'<p> <strong>Japanese Title:</strong> ' + data.alternate_title + '</p>' +
 					'<p> <strong>movie poster:</strong> <img class="movie_poster" src='+ data.cover_image + '</p>' +
