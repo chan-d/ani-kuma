@@ -8,6 +8,13 @@ $(document).ready(function(){
 
 	});
 
+	$(".video_button").on('click', function (){
+	$(".video_player").css("display","block");
+	$(".video_button").css("display", "none");
+
+	});
+	
+
 
 
 

@@ -19,9 +19,12 @@
 			</div>
 			<div class='panel-footer'> 
 			<%= button_to "New Review", "/movies/#{@movie.id}/reviews/new", method: :get,class: "btn btn-warning" %>
+			<button class='video_button'> Watch now</button>
 			</div>
 			</div>
-
+				<div class='video_player'> 
+					<iframe   src="https://drive.google.com/file/d/0B82YkbmbDGjzWC16RTBhUExCdjA/preview" width="600" height="480"></iframe>
+				</div>	
 		</div>	
 	</div>
 </div>
