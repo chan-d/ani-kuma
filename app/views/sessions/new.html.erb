@@ -1,18 +1,18 @@
-<h1>Login</h1>
-<!-- flash messages -->
-  <% flash.each do |name, msg| %>
-    <% if name == "error" %>
-      <p class="alert-danger">
-    <% else %>
-      <p class="alert-success">
-    <% end %>
-      <small> <%= name.capitalize %>: <%= msg %> </small>
-    </p>
-  <% end %>
-<%= form_tag '/login' do %>
+<div class='row'>
+  <div class='container'>
+    <div class='col-md-8 col-md-offset-2'>
+      <div class="panel panel-default">
+        <div class='panel-heading'> <h1>Login</h1></div>
+        <div class='panel-body'>
+        <%= form_tag '/login' do %>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+          Email: <%= text_field_tag :email %>
+          Password: <%= password_field_tag :password %>
+          <%= submit_tag "Submit" %>
 
-<% end %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
