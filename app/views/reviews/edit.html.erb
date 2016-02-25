@@ -10,8 +10,10 @@
 		    <%= f.text_field :title, placeholder: "Title" %></p>
 		   
 		    <p><%= f.text_area :review, placeholder: "Review", class: "about_me_form" %></p>
-		  <%= f.submit "Save Review", class: "btn btn-default" %>
-		  <%= button_to "Back", review_path, method: :get, class: "btn btn-default" %>
+		    <%= f.submit "Save Review", class: "btn btn-default" %>
+		  <%= button_to "Back", review_path, method: :get, class: "btn btn-danger " %>
+		  
+		  
 		<% end %>
 		</div>
 	</div>

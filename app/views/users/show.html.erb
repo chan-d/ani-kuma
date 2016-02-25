@@ -8,7 +8,7 @@
 					<div class="panel-heading"><%= @user.user_name %></div>
 				<div class='panel-body'> 
 					<div class="col-md-3">
-						<div class='panel panel-danger'>
+						<div class='panel panel-primary'>
 						  <div class='panel-body'>
 							<p><img src="http://placehold.it/125x175"></p>
 						  </div>
@@ -16,7 +16,7 @@
 					</div>
 
 					<div class='col-md-3'>
-						<div class="panel panel-warning">
+						<div class="panel panel-primary">
 							
 						  <div class="panel-body"> 
 							<p> <strong> welcome: </strong><%= @user.full_name %> </p>
@@ -26,16 +26,19 @@
 						</div>
 					</div>
 
-					<div class='col-md-5 col-md-offset-1 center'>
-						<p> <strong> About me: </strong><%= @user.about_me %> </p>
-						<div id="about_me_box">							
-								<%= form_for @user, url: {action: 'update'} do |f| %>
-								<%= f.text_area :about_me, class: "about_me_form" %>
-								<%= f.submit "Save", class: "btn btn-success" %>
-								<% end %>
-						</div>
-						
-						<button id="about_me">edit</button>
+					<div class='col-md-5 col-md-offset-1 '>
+						<div class="panel panel-primary"> 
+							<div class='panel-body'> 
+								<p> <strong> About me: </strong><%= @user.about_me %> </p>
+								<div id="about_me_box">							
+										<%= form_for @user, url: {action: 'update'} do |f| %>
+										<%= f.text_area :about_me, class: "about_me_form" %>
+										<%= f.submit "Save", class: "btn btn-success" %>
+										<% end %>
+								</div>								
+								<button id="about_me">edit</button>
+							</div>	
+						</div>	
 					</div>
 				</div> 
 			</div>

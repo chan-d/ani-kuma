@@ -19,7 +19,7 @@
 			</div>
 			<div class='panel-footer'> 
 			<%= button_to "New Review", "/movies/#{@movie.id}/reviews/new", method: :get,class: "btn btn-warning" %>
-			<button class='video_button'> Watch now</button>
+			<button class='video_button btn btn-default'> Watch now</button>
 			</div>
 			</div>
 			<div class='col-md-6'> 
@@ -29,9 +29,11 @@
 					<% elsif @movie.id == 2 %>
 						<% video_id = '0B82YkbmbDGjzamJxNDl3MXl4M0E' %>
 					<% elsif @movie.id == 3 %>	
-						<% video_id = '0B82YkbmbDGjzS2ozOHJOdGJXYUU' %>
+						<% video_id = '0B82YkbmbDGjzRGpJbl9scUdMekk' %>
 					<% elsif @movie.id == 4 %>
 						<% video_id = '0B82YkbmbDGjzNDJfRU9lSnVlT1U' %>
+					<% elsif @movie.id == 5 %>
+						<% video_id = '0B82YkbmbDGjzb3d0MkVJY3FZN3c' %>	
 					<% elsif @movie.id == 6 %>	
 						<% video_id = '0B82YkbmbDGjzbFJKRmNFOXdkLVU' %>
 					<% elsif @movie.id == 7 %>	
@@ -39,7 +41,7 @@
 					<% elsif @movie.id == 8 %>	
 						<% video_id = '0B82YkbmbDGjzS2ozOHJOdGJXYUU' %>
 					<% elsif @movie.id == 9 %>	
-						<% video_id = '0B82YkbmbDGjzS2ozOHJOdGJXYUU' %>
+						<% video_id = '0B82YkbmbDGjzS0RfRXk4V05XMVU' %>
 					<% elsif @movie.id == 10 %>	
 						<% video_id = '0B82YkbmbDGjzS2ozOHJOdGJXYUU' %>	
 					<% end %>

@@ -108,12 +108,18 @@ iframe{
 	display: none;
 }
 .about_me_form{
-	min-width: 250px;
+	min-width: 300px;
 	min-height: 150px;
 }
 
 .video_player{
-	position: relative;
-	vertical-align: center;
 	display: none;
+}
+.button_to {
+	display: inline-block;
+	padding-right: 5px;
+}
+body{
+	background: url('http://www.freecreatives.com/wp-content/uploads/2015/09/blur-background.jpg') no-repeat center center fixed;
+	background-size: cover;
 }

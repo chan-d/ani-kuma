@@ -15,7 +15,7 @@
 		  <%= f.hidden_field :user_id, value: current_user.id%>
 		  <%= f.hidden_field :user_name, value: current_user.user_name%>
 		  <%= f.hidden_field :movie_id, value: params[:id]%>
-		  <p><%= f.submit "Create Review" %></p>
+		  <p><%= f.submit "Create Review", class: "btn btn-default" %></p>
 		<% end %>
 		
 		</div>
