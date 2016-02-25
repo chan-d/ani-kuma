@@ -1,12 +1,21 @@
-<h1>new movie!</h1>
 
-<%= form_for :movie, url: '/movies' do |f| %>
- 
-  <p>English Title: <%= f.text_field :e_title %></p>
-  <p>Japanese Title: <%= f.text_field :j_title %></p>
-  <p>Synopsis: <%= f.text_area :synopsis %></p>
-  <p>Movie poster Url: <%= f.text_field :img_url %></p>
 
-  <p><%= f.submit "Submit" %></p>
+<div class='row'>
+	<div class='container'>
+		<div class='col-md-8 col-md-offset-2'>
+			<div class="panel panel-default">
+				<h1>new movie!</h1>
 
-<% end %>
+				<%= form_for :movie, url: '/movies' do |f| %>
+				 
+				  <p>English Title: <%= f.text_field :e_title %></p>
+				  <p>Japanese Title: <%= f.text_field :j_title %></p>
+				  <p>Synopsis: <%= f.text_area :synopsis %></p>
+				  <p>Movie poster Url: <%= f.text_field :img_url %></p>
+
+				  <p><%= f.submit "Submit" %></p>
+
+				<% end %>
+		</div>
+	</div>
+</div>
