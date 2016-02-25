@@ -51,7 +51,7 @@ iframe{
 
 .jumbotron  {
 	min-height: 500px;
-	background: url('./images/studio_ghibli.jpeg');
+	background: image-url('studio_ghibli.jpeg');
 	background-size: cover;
 	margin-top: -20px;
 }
