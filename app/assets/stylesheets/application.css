@@ -49,12 +49,7 @@ iframe{
 	color: white;
 }
 
-.jumbotron  {
-	min-height: 500px;
-	background-image: image-url('images/studio_ghibli.jpeg');
-	background-size: cover;
-	margin-top: -20px;
-}
+
 
 .b_center {
 	border: 1px solid black;
