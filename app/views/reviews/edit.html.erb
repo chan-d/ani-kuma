@@ -6,10 +6,10 @@
 		</div>
 		<div class='panel-body centered_block'>
 			<%= form_for @review do |f| %>
-		  <strong>Title: </strong>
-		    <p><%= f.text_field :title, placeholder: "Title" %></p>
-		   <strong>Content:</strong>
-		    <p><%= f.text_area :review, placeholder: "Review" %></p>
+		  <p><strong>Title: </strong>
+		    <%= f.text_field :title, placeholder: "Title" %></p>
+		   
+		    <p><%= f.text_area :review, placeholder: "Review", class: "about_me_form" %></p>
 		  <%= f.submit "Save Review", class: "btn btn-default" %>
 		  <%= button_to "Back", review_path, method: :get, class: "btn btn-default" %>
 		<% end %>

@@ -9,9 +9,9 @@
 
 		<%= form_for @review, url: new_review_path do |f| %>
 		<br>
-			<p><%= f.text_field :movie_name, value: current_movie.e_title %></p>	
-		    <p><%= f.text_field :title, placeholder: "Title" %></p>
-		    <p><%= f.text_area :review, placeholder: "Review" %></p>
+			<p>Movie Title:  <%= f.text_field :movie_name, value: current_movie.e_title %></p>	
+		    <p>Review Title: <%= f.text_field :title, placeholder: "Title" %></p>
+		    <p><%= f.text_area :review, placeholder: "Review", class: "about_me_form" %></p>
 		  <%= f.hidden_field :user_id, value: current_user.id%>
 		  <%= f.hidden_field :user_name, value: current_user.user_name%>
 		  <%= f.hidden_field :movie_id, value: params[:id]%>
