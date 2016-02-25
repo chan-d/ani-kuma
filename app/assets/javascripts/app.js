@@ -27,7 +27,7 @@ $(document).ready(function(){
 		$('#rendered_search').empty();
 		$.ajax({
 			method: "GET",
-			url: 'http://hummingbird.me/api/v1/anime/' + searched,
+			url: 'https://hummingbird.me/api/v1/anime/' + searched,
 			success: function(data) {	
 				var syn = data.synopsis.replace(/"/g, '&quot;');
 				$('#rendered_search').append(
